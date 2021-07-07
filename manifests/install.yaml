@@ -2970,7 +2970,7 @@ metadata:
 spec:
   ports:
   - name: http
-    port: 80
+    port: 7080
     protocol: TCP
     targetPort: 8080
   - name: https
@@ -2979,6 +2979,7 @@ spec:
     targetPort: 8080
   selector:
     app.kubernetes.io/name: argocd-server
+  type: LoadBalancer
 ---
 apiVersion: v1
 kind: Service
